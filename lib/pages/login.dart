@@ -13,16 +13,28 @@ class Login extends StatelessWidget {
             left: 0.0,
             child: Column(
               children: [
-                Image.asset(
-                  'assets/image/i1.jpg',
-                  alignment: Alignment.topLeft,
-                  height: MediaQuery.of(context).size.width / 1,
-                  width: MediaQuery.of(context).size.width / 1,
+                Container(
+                  child: Image.asset(
+                    'assets/image/i1.jpg',
+                    alignment: Alignment.topLeft,
+                    height: MediaQuery.of(context).size.width / 1,
+                    width: MediaQuery.of(context).size.width / 1,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.5),
+                        blurRadius: 25,
+                        offset: Offset(0, -40),
+                      ),
+                    ],
+                  ),
                 ),
                 Column(
                   children: const [
                     Text(
-                      'data',
+                      'Login',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 30,
