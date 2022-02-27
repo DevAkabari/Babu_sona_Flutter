@@ -1,3 +1,4 @@
+import 'package:chate_ui/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -95,7 +96,7 @@ class Login extends StatelessWidget {
                         prefixIcon: Padding(
                           padding: const EdgeInsets.all(11.0),
                           child: SvgPicture.asset(
-                            'assets/icon/User1.svg',
+                            'assets/icon/Userr.svg',
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -112,7 +113,7 @@ class Login extends StatelessWidget {
                             TextStyle(fontSize: 20.0, color: Color(0xFFB1B1B1)),
                         contentPadding:
                             const EdgeInsets.symmetric(vertical: 16.0),
-                        fillColor: Color(0xFFECECEC),
+                        fillColor: const Color(0xFFECECEC),
                         filled: true,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
@@ -137,7 +138,7 @@ class Login extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     ElevatedButton(
@@ -145,11 +146,16 @@ class Login extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
-                        primary: Color(0xffA23243),
-                        padding: EdgeInsets.symmetric(vertical: 13),
+                        primary: const Color(0xffA23243),
+                        padding: const EdgeInsets.symmetric(vertical: 13),
                         minimumSize: const Size.fromHeight(50), // NEW
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Home()),
+                        );
+                      },
                       child: const Text(
                         'Log in',
                         style: TextStyle(fontSize: 24),
